@@ -1,28 +1,25 @@
 name: amazon_clone
 description: "A new Flutter project."
-publish_to: 'none' 
+publish_to: 'none'
 
 version: 1.0.0+1
 
 environment:
   sdk: '>=3.3.3 <4.0.0'
 
-
 dependencies:
+  country_picker: ^2.0.26
+  cupertino_icons: ^1.0.6
   flutter:
     sdk: flutter
 
-
-  cupertino_icons: ^1.0.6
-
 dev_dependencies:
+
+  flutter_lints: ^3.0.0
   flutter_test:
     sdk: flutter
 
-  flutter_lints: ^3.0.0
-
 flutter:
-
 
   uses-material-design: true
   assets:
@@ -32,7 +29,6 @@ flutter:
     - assets/images/menu_pics/
     - assets/images/offersNsponcered/
     - assets/images/todays_deals/
-
   # fonts:
   #   - family: Schyler
   #     fonts:
@@ -44,4 +40,3 @@ flutter:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
-
