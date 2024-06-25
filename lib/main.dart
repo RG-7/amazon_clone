@@ -14,7 +14,7 @@ class Amazon extends StatelessWidget {
     return MaterialApp(
       theme: theme,
       debugShowCheckedModeBanner: false,
-      home: AuthScreen(),
+      home:const AuthScreen(),
     );
   }
 }
