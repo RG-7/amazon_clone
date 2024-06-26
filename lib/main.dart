@@ -1,5 +1,4 @@
 import 'package:amazon_clone/utils/theme.dart';
-import 'package:amazon_clone/view/auth_screen/auth_screens.dart';
 import 'package:amazon_clone/view/auth_screen/otp_screen.dart';
 import 'package:flutter/material.dart';
 

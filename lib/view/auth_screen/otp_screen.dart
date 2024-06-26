@@ -5,6 +5,7 @@ import 'package:amazon_clone/utils/colors.dart';
 import 'package:amazon_clone/view/auth_screen/auth_screens.dart';
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class OTPScreen extends StatefulWidget {
   String mobileNumber;
   OTPScreen({
