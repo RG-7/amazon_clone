@@ -3,6 +3,7 @@ import 'package:amazon_clone/firebase_options.dart';
 import 'package:amazon_clone/utils/theme.dart';
 import 'package:amazon_clone/view/auth/auth_screens.dart';
 import 'package:amazon_clone/view/auth/otp_screen.dart';
+import 'package:amazon_clone/view/auth/signin_logic.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +28,7 @@ class Amazon extends StatelessWidget {
       child: MaterialApp(
         theme: theme,
         debugShowCheckedModeBanner: false,
-        home: const AuthScreen(),
+        home: const SignInLogic(),
       ),
     );
   }
