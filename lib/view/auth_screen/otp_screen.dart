@@ -4,6 +4,7 @@ import 'package:amazon_clone/constants/common_functions.dart';
 import 'package:amazon_clone/utils/colors.dart';
 import 'package:amazon_clone/view/auth_screen/auth_screens.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 // ignore: must_be_immutable
 class OTPScreen extends StatefulWidget {
@@ -110,7 +111,7 @@ class _OTPScreenState extends State<OTPScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  InkWell(
+                  GestureDetector(
                     onTap: () {},
                     child: Text(
                       'Resend OTP',
