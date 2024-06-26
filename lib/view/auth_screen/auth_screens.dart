@@ -66,8 +66,7 @@ class _AuthScreenState extends State<AuthScreen> {
                   return createAccount(width, height, textTheme, context);
                 }),
                 CommonFunctions.blankSpace(height * 0.05, 0),
-                BottomAuthScreenWidget(
-                    width: width, height: height, textTheme: textTheme)
+                BottomAuthScreenWidget(),
               ],
             ),
           ),
@@ -264,19 +263,10 @@ class _AuthScreenState extends State<AuthScreen> {
                   ],
                 ),
                 CommonFunctions.blankSpace(height * 0.02, 0),
-                ElevatedButton(
+                CommonAuthButton(
+                  title: 'Continue',
                   onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    side: BorderSide(color: transparent, width: 1),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(2)),
-                    minimumSize: Size(width * 0.88, height * 0.055),
-                    backgroundColor: amber,
-                  ),
-                  child: Text(
-                    'Continue',
-                    style: textTheme.displaySmall,
-                  ),
+                  btnWidth: 0.88,
                 ),
                 CommonFunctions.blankSpace(height * 0.02, 0),
                 RichText(
@@ -474,19 +464,10 @@ class _AuthScreenState extends State<AuthScreen> {
                   style: textTheme.bodyMedium,
                 ),
                 CommonFunctions.blankSpace(height * 0.02, 0),
-                ElevatedButton(
+                CommonAuthButton(
+                  title: 'Continue',
                   onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    side: BorderSide(color: transparent, width: 1),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(2)),
-                    minimumSize: Size(width * 0.88, height * 0.055),
-                    backgroundColor: amber,
-                  ),
-                  child: Text(
-                    'Continue',
-                    style: textTheme.displaySmall,
-                  ),
+                  btnWidth: 0.88,
                 ),
                 CommonFunctions.blankSpace(height * 0.02, 0),
                 RichText(
@@ -579,20 +560,48 @@ class _AuthScreenState extends State<AuthScreen> {
   }
 }
 
-class BottomAuthScreenWidget extends StatelessWidget {
-  const BottomAuthScreenWidget({
-    super.key,
-    required this.width,
-    required this.height,
-    required this.textTheme,
-  });
-
-  final double width;
-  final double height;
-  final TextTheme textTheme;
+class CommonAuthButton extends StatelessWidget {
+  String title;
+  VoidCallback onPressed;
+  double? horizontalPadding;
+  double btnWidth;
+  CommonAuthButton(
+      {super.key,
+      required this.title,
+      required this.onPressed,
+      required this.btnWidth});
 
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
+    final textTheme = Theme.of(context).textTheme;
+    return ElevatedButton(
+      onPressed: onPressed,
+      style: ElevatedButton.styleFrom(
+        side: BorderSide(color: transparent, width: 1),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(2)),
+        minimumSize: Size(width * btnWidth, height * 0.055),
+        backgroundColor: amber,
+      ),
+      child: Text(
+        title,
+        style: textTheme.displaySmall,
+      ),
+    );
+  }
+}
+
+class BottomAuthScreenWidget extends StatelessWidget {
+  const BottomAuthScreenWidget({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
+    final textTheme = Theme.of(context).textTheme;
     return Column(
       children: [
         Container(

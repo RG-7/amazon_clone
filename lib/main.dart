@@ -1,5 +1,6 @@
 import 'package:amazon_clone/utils/theme.dart';
 import 'package:amazon_clone/view/auth_screen/auth_screens.dart';
+import 'package:amazon_clone/view/auth_screen/otp_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class Amazon extends StatelessWidget {
     return MaterialApp(
       theme: theme,
       debugShowCheckedModeBanner: false,
-      home:const AuthScreen(),
+      home: OTPScreen(mobileNumber: '+91-9876543210'),
     );
   }
 }
