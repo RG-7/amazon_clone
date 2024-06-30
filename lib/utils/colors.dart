@@ -16,7 +16,6 @@ Color teal = Colors.teal;
 const secondaryColor = Color.fromRGBO(255, 153, 0, 1);
 Color red = Colors.red;
 
-
 //Lienar Gradient Color
 
 List<Color> appBarGradientColor = [
