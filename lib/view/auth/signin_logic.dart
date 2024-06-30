@@ -1,6 +1,6 @@
 import 'package:amazon_clone/controller/services/auth/auth_services.dart';
 import 'package:amazon_clone/view/auth/auth_screens.dart';
-import 'package:amazon_clone/view/home/home_screen.dart';
+import 'package:amazon_clone/view/user/home/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 
