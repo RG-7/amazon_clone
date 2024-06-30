@@ -1,6 +1,7 @@
 import 'package:amazon_clone/controller/services/auth/auth_services.dart';
 import 'package:amazon_clone/view/auth/auth_screens.dart';
 import 'package:amazon_clone/view/user/home/home_screen.dart';
+import 'package:amazon_clone/view/user/user_persistant_navbar/user_bottom_navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 
@@ -18,7 +19,7 @@ class _SignInLogicState extends State<SignInLogic> {
         ? Navigator.pushAndRemoveUntil(
             context,
             PageTransition(
-                child: const HomeScreen(),
+                child: const UserBottomNavBar(),
                 type: PageTransitionType.rightToLeft),
             (route) => false)
         : Navigator.pushAndRemoveUntil(
