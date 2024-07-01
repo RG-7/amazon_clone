@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:motion_toast/motion_toast.dart';
 
 import '../utils/colors.dart';
 
@@ -17,8 +18,6 @@ class CommonFunctions {
       thickness: 3,
     );
   }
-
-  /*
 
   static showSuccessToast(
       {required BuildContext context, required String message}) {
@@ -46,5 +45,4 @@ class CommonFunctions {
       position: MotionToastPosition.top,
     ).show(context);
   }
-  */
 }
