@@ -87,7 +87,10 @@ class _MenuScreenState extends State<MenuScreen> {
                             style: textTheme.bodyMedium,
                           ),
                           const Spacer(),
-                          Icon(Icons.chevron_right_rounded,color: black,)
+                          Icon(
+                            Icons.chevron_right_rounded,
+                            color: black,
+                          ),
                         ],
                       ),
                     );
